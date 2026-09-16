@@ -1,73 +1,67 @@
 <!doctype html>
-<html lang="pt-BR">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ferrari Gesso | Itu e Região</title>
-<meta name="description" content="Drywall, forros, sancas, molduras e gesso liso em Itu e região. Peça seu orçamento pelo WhatsApp.">
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ferrari Gesso | Drywall, Forros e Gesso em Itu e Região</title>
+<meta name="description" content="Ferrari Gesso em Itu e região: drywall, forros, sancas, molduras e gesso liso. Solicite seu orçamento pelo WhatsApp.">
+<meta name="theme-color" content="#111315">
 <style>
-:root{--dark:#101316;--gold:#e7b84b;--light:#f6f4ef;--muted:#6d7378;--green:#25d366}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#202326;background:#fff}
-.hero{min-height:78vh;display:flex;align-items:center;color:white;position:relative;overflow:hidden;background:#101316}
-.slides{position:absolute;inset:0;z-index:0}
-.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.1s ease;animation:heroSlide 18s infinite}
-.slide:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,12,14,.93),rgba(10,12,14,.42))}
-.slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=85');animation-delay:0s}
-.slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85');animation-delay:6s}
-.slide:nth-child(3){background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85');animation-delay:12s}
-@keyframes heroSlide{0%{opacity:0}5%{opacity:1}30%{opacity:1}36%{opacity:0}100%{opacity:0}}
-.hero .wrap{position:relative;z-index:2}
-.wrap{width:min(1120px,90%);margin:auto}.brand{font-weight:900;letter-spacing:2px;font-size:24px}.brand span{color:var(--gold)}
-.hero h1{font-size:clamp(38px,6vw,72px);line-height:1.02;max-width:850px;margin:30px 0 18px}.hero p{font-size:20px;max-width:680px;line-height:1.5}
-.btn{display:inline-block;margin-top:20px;padding:17px 25px;border-radius:9px;background:var(--green);color:#fff;text-decoration:none;font-weight:800}
-section{padding:72px 0}h2{font-size:36px;margin:0 0 12px}.lead{color:var(--muted);font-size:18px;margin-bottom:35px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:28px;border-radius:14px;background:var(--light);border:1px solid #e9e5dc}.card h3{margin-top:0}
-.band{background:var(--dark);color:white}.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}.gallery img{width:100%;height:310px;object-fit:cover;border-radius:12px}
-.note{font-size:13px;color:#9ca1a5;margin-top:15px}.cta{text-align:center;background:#f0eadc}.cta h2{font-size:42px}
-footer{background:#0b0d0f;color:#bbb;padding:30px 0}.float{position:fixed;right:20px;bottom:20px;background:var(--green);color:white;text-decoration:none;font-weight:bold;padding:15px 18px;border-radius:999px;box-shadow:0 8px 25px #0004}
-@media(max-width:750px){.grid,.gallery{grid-template-columns:1fr}.gallery img{height:240px}.hero{min-height:88vh}.hero p{font-size:17px}}
-</style>
-</head>
+:root{--dark:#111315;--dark2:#1b1e21;--gold:#e6b84a;--cream:#f5f1e8;--green:#25d366;--text:#202326;--muted:#6f7478}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff}
+.wrap{width:min(1180px,91%);margin:auto}.top{position:absolute;z-index:5;top:0;left:0;right:0;padding:24px 0;color:#fff}.top .wrap{display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:2px;font-size:25px}.brand span{color:var(--gold)}nav a{color:#fff;text-decoration:none;margin-left:22px;font-weight:700;font-size:14px}
+.hero{height:min(820px,92vh);min-height:650px;position:relative;overflow:hidden;background:#111;color:#fff;display:flex;align-items:center}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:fade 18s infinite;transform:scale(1.03)}
+.slide:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,9,10,.92) 0%,rgba(7,9,10,.65) 45%,rgba(7,9,10,.25) 100%)}
+.slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1900&q=88');animation-delay:0s}
+.slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1900&q=88');animation-delay:6s}
+.slide:nth-child(3){background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1900&q=88');animation-delay:12s}
+@keyframes fade{0%{opacity:0}5%{opacity:1}31%{opacity:1}37%{opacity:0}100%{opacity:0}}
+.heroContent{position:relative;z-index:2}.eyebrow{color:var(--gold);font-weight:900;letter-spacing:2px}.hero h1{font-size:clamp(43px,6.2vw,78px);line-height:.98;max-width:900px;margin:18px 0}.hero p{font-size:20px;line-height:1.55;max-width:680px}.btn{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:17px 24px;border-radius:10px;background:var(--green);color:#fff;text-decoration:none;font-weight:900;box-shadow:0 8px 25px #0003}.ghost{background:transparent;border:1px solid #ffffff88;margin-left:10px}
+section{padding:78px 0}.title{font-size:clamp(32px,4vw,48px);margin:0 0 10px}.lead{color:var(--muted);font-size:18px;line-height:1.55;max-width:780px;margin-bottom:34px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{border-radius:16px;overflow:hidden;background:var(--cream);box-shadow:0 7px 25px #0000000d}.service img{width:100%;height:190px;object-fit:cover}.service div{padding:22px}.service h3{margin:0 0 8px;font-size:22px}.service p{margin:0;color:var(--muted);line-height:1.5}
+.dark{background:var(--dark);color:#fff}.dark .lead{color:#c8cacc}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:220px;gap:12px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:14px}.gallery img:first-child{grid-row:span 2}.gallery img:nth-child(4){grid-column:span 2}.note{font-size:12px;color:#a7aaad;margin-top:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:28px;border:1px solid #e6e1d7;border-radius:16px}.num{font-size:38px;font-weight:900;color:var(--gold)}.step h3{margin:8px 0}.step p{color:var(--muted);line-height:1.5}
+.cover{min-height:420px;background:linear-gradient(90deg,#111d,#1116),url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=85') center/cover;display:flex;align-items:center;color:#fff}.cover h2{font-size:clamp(38px,5vw,60px);max-width:760px;margin:0}
+.cta{text-align:center;background:var(--cream)}.cta h2{font-size:clamp(36px,5vw,56px);margin:0}.cta p{font-size:19px;color:var(--muted)}
+footer{background:#090b0c;color:#aaa;padding:35px 0;line-height:1.7}footer a{color:var(--gold);text-decoration:none}.float{position:fixed;z-index:20;right:20px;bottom:20px;background:var(--green);color:#fff;text-decoration:none;font-weight:900;padding:15px 19px;border-radius:999px;box-shadow:0 8px 25px #0005}
+@media(max-width:780px){nav{display:none}.hero{min-height:690px}.hero p{font-size:17px}.services,.steps{grid-template-columns:1fr}.gallery{grid-template-columns:1fr;grid-auto-rows:240px}.gallery img:first-child{grid-row:auto}.gallery img:nth-child(4){grid-column:auto}.ghost{display:none}section{padding:58px 0}}
+</style></head>
 <body>
+<div class="top"><div class="wrap"><div class="brand">FERRARI <span>GESSO</span></div><nav><a href="#servicos">SERVIÇOS</a><a href="#galeria">GALERIA</a><a href="#orcamento">ORÇAMENTO</a></nav></div></div>
 <header class="hero">
-<div class="slides" aria-hidden="true"><div class="slide"></div><div class="slide"></div><div class="slide"></div></div>
-<div class="wrap">
-<div class="brand">FERRARI <span>GESSO</span></div>
-<h1>Seu ambiente com acabamento que faz diferença.</h1>
-<p>Drywall, forros, sancas, molduras e gesso liso para projetos residenciais e comerciais em <b>Itu e região</b>.</p>
-<a class="btn" href="https://wa.me/5511940867283?text=Olá%20Ferrari%20Gesso!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">PEDIR ORÇAMENTO NO WHATSAPP</a>
-</div></header>
+<div class="slide"></div><div class="slide"></div><div class="slide"></div>
+<div class="wrap heroContent"><div class="eyebrow">ITU E REGIÃO</div><h1>Detalhes que transformam ambientes.</h1><p>Drywall, forros, sancas, molduras e gesso liso para projetos residenciais e comerciais.</p>
+<a class="btn" href="https://wa.me/5511940867283?text=Olá%20Ferrari%20Gesso!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">💬 PEDIR ORÇAMENTO</a><a class="btn ghost" href="#galeria">VER GALERIA</a></div></header>
 
-<section><div class="wrap"><h2>Serviços</h2><p class="lead">Soluções em gesso para transformar, dividir e valorizar ambientes.</p>
-<div class="grid">
-<div class="card"><h3>Drywall</h3><p>Paredes, divisórias e soluções práticas para diferentes ambientes.</p></div>
-<div class="card"><h3>Forros</h3><p>Forros de gesso para projetos residenciais e comerciais.</p></div>
-<div class="card"><h3>Sancas</h3><p>Detalhes no teto que valorizam iluminação e decoração.</p></div>
-<div class="card"><h3>Molduras</h3><p>Acabamentos para dar personalidade aos ambientes.</p></div>
-<div class="card"><h3>Gesso liso</h3><p>Acabamento uniforme para paredes e tetos.</p></div>
-<div class="card"><h3>Projetos sob medida</h3><p>Conte sua ideia e solicite uma avaliação pelo WhatsApp.</p></div>
+<section id="servicos"><div class="wrap"><h2 class="title">Soluções em gesso</h2><p class="lead">Do acabamento ao projeto completo, a Ferrari Gesso atende Itu e região com soluções para diferentes ambientes.</p>
+<div class="services">
+<article class="service"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="Drywall"><div><h3>Drywall</h3><p>Paredes, divisórias e soluções versáteis para residências e espaços comerciais.</p></div></article>
+<article class="service"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" alt="Forros"><div><h3>Forros</h3><p>Forros de gesso para criar ambientes modernos, organizados e bem acabados.</p></div></article>
+<article class="service"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Sancas"><div><h3>Sancas</h3><p>Detalhes no teto que valorizam a arquitetura e projetos de iluminação.</p></div></article>
+<article class="service"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Molduras"><div><h3>Molduras</h3><p>Acabamentos que acrescentam personalidade e elegância aos ambientes.</p></div></article>
+<article class="service"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Gesso liso"><div><h3>Gesso liso</h3><p>Acabamento uniforme para paredes e tetos.</p></div></article>
+<article class="service"><img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=900&q=80" alt="Projetos sob medida"><div><h3>Projetos sob medida</h3><p>Conte sua ideia e fale conosco para avaliar a solução adequada ao seu espaço.</p></div></article>
 </div></div></section>
 
-<section class="band"><div class="wrap"><h2>Inspire-se</h2><p class="lead" style="color:#c8c8c8">Imagens ilustrativas para o protótipo. Na versão final, substituímos por trabalhos reais da Ferrari Gesso.</p>
+<section class="dark" id="galeria"><div class="wrap"><h2 class="title">Inspire-se</h2><p class="lead">Uma seleção visual para mostrar possibilidades de acabamento e transformação de ambientes.</p>
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80" alt="Ambiente moderno">
-<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Sala moderna">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Interior residencial">
-<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Projeto de interior">
-<img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=900&q=80" alt="Acabamento de interior">
-</div><p class="note">* Imagens de referência; não representam obras executadas pela Ferrari Gesso.</p></div></section>
+<img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1300&q=85" alt="Ambiente moderno">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Sala contemporânea">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Interior residencial">
+<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1300&q=85" alt="Projeto de interiores">
+<img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=900&q=85" alt="Acabamento">
+</div><p class="note">* Imagens ilustrativas de referência. Não representam obras executadas pela Ferrari Gesso. Serão substituídas por fotos reais dos serviços.</p></div></section>
 
-<section><div class="wrap"><h2>Atendimento em Itu e região</h2><p class="lead">Precisa de drywall, forro, sanca, moldura ou gesso liso? Envie uma mensagem e explique o que você precisa.</p>
-<div class="grid">
-<div class="card"><h3>Orçamento fácil</h3><p>Envie fotos e medidas pelo WhatsApp para iniciar o atendimento.</p></div>
-<div class="card"><h3>Residencial</h3><p>Soluções para quartos, salas, cozinhas e outros ambientes.</p></div>
-<div class="card"><h3>Comercial</h3><p>Drywall e acabamentos para lojas, escritórios e estabelecimentos.</p></div>
+<section><div class="wrap"><h2 class="title">Seu orçamento em 3 passos</h2><p class="lead">Facilitamos o primeiro contato para você explicar seu projeto.</p><div class="steps">
+<div class="step"><div class="num">01</div><h3>Chame no WhatsApp</h3><p>Conte qual serviço você precisa e em qual cidade será realizado.</p></div>
+<div class="step"><div class="num">02</div><h3>Envie fotos e medidas</h3><p>Quando possível, envie imagens e medidas aproximadas do ambiente.</p></div>
+<div class="step"><div class="num">03</div><h3>Combine a avaliação</h3><p>A Ferrari Gesso continua o atendimento e orienta os próximos passos.</p></div>
 </div></div></section>
 
-<section class="cta"><div class="wrap"><h2>Vamos transformar seu ambiente?</h2><p>Fale diretamente com a Ferrari Gesso.</p>
-<a class="btn" href="https://wa.me/5511940867283?text=Olá%20Ferrari%20Gesso!%20Vi%20o%20site%20e%20quero%20um%20orçamento." target="_blank">WHATSAPP • (11) 94086-7283</a></div></section>
-<footer><div class="wrap"><b>Ferrari Gesso</b> • Itu e região<br>
-<small>Desenvolvido por <a href="https://wdmapps.com.br" target="_blank" rel="noopener" style="color:#e7b84b;text-decoration:none;font-weight:bold">WDM Apps</a> • <a href="https://wdmapps.com.br" target="_blank" rel="noopener" style="color:#ddd">wdmapps.com.br</a></small>
-</div></footer>
-<a class="float" href="https://wa.me/5511940867283?text=Olá%20Ferrari%20Gesso!%20Gostaria%20de%20um%20orçamento." target="_blank">WhatsApp</a>
+<section class="cover"><div class="wrap"><h2>Do teto às paredes, um novo visual para o seu ambiente.</h2><a class="btn" href="https://wa.me/5511940867283?text=Olá%20Ferrari%20Gesso!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank">FALE COM A FERRARI GESSO</a></div></section>
+
+<section class="cta" id="orcamento"><div class="wrap"><h2>Vamos tirar seu projeto do papel?</h2><p>Atendimento em Itu e região.</p><a class="btn" href="https://wa.me/5511940867283?text=Olá%20Ferrari%20Gesso!%20Vi%20o%20site%20e%20quero%20um%20orçamento." target="_blank">💬 WHATSAPP • (11) 94086-7283</a></div></section>
+
+<footer><div class="wrap"><strong style="color:#fff">Ferrari Gesso</strong> • Itu e região<br>Drywall • Forros • Sancas • Molduras • Gesso liso<br><small>© 2026 Ferrari Gesso • Desenvolvido por <a href="https://wdmapps.com.br" target="_blank" rel="noopener"><b>WDM Apps</b></a> • <a href="https://wdmapps.com.br" target="_blank" rel="noopener">wdmapps.com.br</a></small></div></footer>
+<a class="float" href="https://wa.me/5511940867283?text=Olá%20Ferrari%20Gesso!%20Gostaria%20de%20um%20orçamento." target="_blank">💬 WhatsApp</a>
 </body></html>
