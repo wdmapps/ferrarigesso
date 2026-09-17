@@ -1,9 +1,10 @@
-const { initializeApp, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, getFirestore, doc, getDoc, setDoc, serverTimestamp, firebaseConfig, SITE_ID, DEFAULT_DATA } = window.__FGFB;
+const { initializeApp, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, getFirestore, doc, getDoc, setDoc, serverTimestamp, deleteField, firebaseConfig, SITE_ID, DEFAULT_DATA } = window.__FGFB;
 const ADMIN_EMAILS = ['ferrarigesso@hotmail.com'];
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const siteRef = doc(db, 'sites', SITE_ID);
+const gestaoRef = doc(db, 'admins', 'gestao-ferrarigesso');
 
 const $ = (s, root=document) => root.querySelector(s);
 const $$ = (s, root=document) => [...root.querySelectorAll(s)];
@@ -58,10 +59,14 @@ async function isAdmin(user){
 async function loadAll(){
   setSync('Sincronizando…',false);
   try{
-    const snap=await getDoc(siteRef);
+    const [snap, gSnap]=await Promise.all([getDoc(siteRef),getDoc(gestaoRef)]);
     const data=snap.exists()?snap.data():{};
     state.site=mergeSite(data);
-    state.gestao=normalizeGestao(data.gestao || loadLocal() || {});
+    state.gestao=normalizeGestao((gSnap.exists()?gSnap.data().gestao:null) || data.gestao || loadLocal() || {});
+    if(!gSnap.exists() && data.gestao){
+      await setDoc(gestaoRef,{gestao:state.gestao,gestaoAtualizadaEm:serverTimestamp()},{merge:true});
+      await setDoc(siteRef,{gestao:deleteField()},{merge:true});
+    }
     await resolveAllMedia();
     persistLocal(); setSync('Online');
   }catch(e){
@@ -70,7 +75,7 @@ async function loadAll(){
 }
 async function saveGestao(msg='Alterações salvas'){
   persistLocal(); setSync('Salvando…',false);
-  try{ await setDoc(siteRef,{gestao:state.gestao,gestaoAtualizadaEm:serverTimestamp()},{merge:true}); setSync('Online'); toast(msg,'ok'); return true; }
+  try{ await setDoc(gestaoRef,{gestao:state.gestao,gestaoAtualizadaEm:serverTimestamp()},{merge:true}); setSync('Online'); toast(msg,'ok'); return true; }
   catch(e){ setSync('Pendente',false); toast('Não foi possível salvar no servidor. Tente novamente.','err'); return false; }
 }
 async function saveSite(){
