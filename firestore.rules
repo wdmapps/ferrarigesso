@@ -1,0 +1,42 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    // Administradores: e-mail de operação (WDM Apps) ou usuários com
+    // doc ativo em admins/{uid}. O doc admins/{uid} é criado por um
+    // administrador via Firebase Console (ou script de migração).
+    function isAdmin() {
+      return signedIn() && (
+        request.auth.token.email == 'williamwdm@gmail.com'
+        || (exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+          && get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.active == true)
+      );
+    }
+
+    // Conteúdo/configuração do site: leitura pública (site público),
+    // escrita exclusiva de administradores autenticados.
+    match /sites/{siteId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Imagens do site (upload comprimido pelo painel): leitura pública,
+    // escrita de admins; cada documento guarda no máximo ~800 KB (base64).
+    match /sites/{siteId}/midias/{midiaId} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && request.resource.data.dataUrl is string
+        && request.resource.data.dataUrl.size() < 900000;
+      allow delete: if isAdmin();
+    }
+
+    // Lista de administradores: visível somente para administradores.
+    match /admins/{uid} {
+      allow read: if isAdmin();
+      allow write: if isAdmin();
+    }
+  }
+}

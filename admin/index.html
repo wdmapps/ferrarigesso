@@ -1,0 +1,28 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ferrari Gesso | Administração</title><link rel="icon" href="data:,"><style>
+:root{--gold:#d7aa43;--bg:#0d0f11;--card:#191c1f;--green:#25d366;--red:#e5484d;--line:#303438}
+*{box-sizing:border-box}body{margin:0;background:#111417;color:#eee;font-family:Arial,Helvetica,sans-serif}
+.head{background:#070809;padding:22px}.wrap{width:min(1150px,92%);margin:auto}.head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}.head b{font-size:25px}.head span{color:var(--gold)}.headRight{display:flex;align-items:center;gap:10px;min-width:0}.headRight .who{color:#8b9196;font-size:13px;max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:none}.headRight .siteLink{color:#fff;font-size:13px;text-decoration:none;font-weight:700;padding:8px 11px;border:1px solid var(--line);border-radius:6px}.headRight .exit{background:none;border:1px solid #5a2f31;color:#f0a0a3;padding:8px 13px;border-radius:6px;font-weight:900;cursor:pointer;font-size:13px}.grid{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:28px 0}
+.menu,.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}.menu button{display:block;width:100%;padding:12px;margin-bottom:7px;background:none;border:0;color:#ddd;text-align:left;border-radius:7px;font-weight:bold;cursor:pointer;font-size:14px}.menu button:hover,.menu .active{background:#292d31;color:#e8c66a}.menu a.back{color:#aaa;display:block;padding:12px;text-decoration:none;font-size:14px}.menu hr{border:0;border-top:1px solid var(--line);margin:12px 0}
+.panel h1{margin-top:0}.notice{padding:13px;background:#24282b;border-left:4px solid var(--gold);margin-bottom:20px;color:#ccc;font-size:14px;line-height:1.5}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.photo{background:#101214;border:1px solid var(--line);border-radius:9px;overflow:hidden;margin-bottom:14px}.photo img{width:100%;height:180px;object-fit:cover;display:block;background:#0a0b0d}.photo .photoBody{padding:12px}.photo b{color:#e8c66a;font-size:14px}.btn{display:inline-block;padding:9px 11px;background:#fff;color:#111;border-radius:6px;font-weight:bold;cursor:pointer;font-size:13px;position:relative}
+input[type=file]{display:none}
+.progress{display:none;margin-top:9px;height:7px;background:#2a2e31;border-radius:4px;overflow:hidden}.progress.on{display:block}.progress i{display:block;height:100%;background:var(--gold);width:0}.progText{margin-top:5px;font-size:12px;color:#d7aa43}
+.field{margin-bottom:12px}.field label{display:block;color:#b9bec2;font-size:13px;margin-bottom:5px}.field input,.field textarea{width:100%;padding:10px;background:#101214;border:1px solid var(--line);border-radius:6px;color:#eee;font-size:14px;font-family:inherit}.field textarea{min-height:74px;resize:vertical}
+.svcgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.svc{background:#101214;border:1px solid var(--line);border-radius:9px;overflow:hidden;margin-bottom:14px}.svc .svcImg{width:100%;height:150px;object-fit:cover;display:block;background:#0a0b0d}.svc .svcBody{padding:12px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form .full{grid-column:1/-1}
+.save{background:var(--green);border:0;color:#fff;padding:13px 18px;border-radius:7px;font-weight:900;margin-top:20px;cursor:pointer;font-size:15px}.save:disabled{opacity:.45;cursor:not-allowed}
+.saveWrap{position:sticky;bottom:0;background:linear-gradient(transparent,#111417 30%);padding-top:18px}
+#saveInfo{color:#b9bec2;font-size:13px;margin-top:10px}
+/* login */
+.loginWrap{min-height:calc(100vh - 78px);display:grid;place-items:center;padding:26px 15px}.login{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px;width:min(420px,100%)}.login h1{margin:0 0 6px;font-size:23px;color:#f5f2e9}.login p{color:#b9bec2;font-size:14px;margin:0 0 18px;line-height:1.5}.loginErr{background:#3a1d1f;border:1px solid #6d2c30;color:#f6b4b7;padding:10px 12px;border-radius:7px;margin-bottom:14px;font-size:13px}
+.btnGreen{display:inline-block;width:100%;padding:13px;background:var(--green);border:0;color:#fff;border-radius:7px;font-weight:900;cursor:pointer;font-size:15px;margin-top:14px}
+.denied{color:#f6b4b7;text-align:center;padding:40px 20px}
+/* toasts */
+#toasts{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;flex-direction:column;gap:9px}.toast{padding:13px 16px;border-radius:8px;color:#fff;font-size:14px;font-weight:700;box-shadow:0 8px 24px #000a;max-width:340px;animation:tin .25s ease}.toast.ok{background:#157347}.toast.err{background:#a83237}.toast.info{background:#3a4a5a}@keyframes tin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:750px){.grid{grid-template-columns:1fr}.photos,.svcgrid,.form{grid-template-columns:1fr}.head .wrap{flex-wrap:wrap}}
+</style></head><body>
+<header class="head"><div class="wrap"><b>FERRARI <span>GESSO</span> • ADMINISTRAÇÃO</b><div class="headRight"><span id="who" class="who"></span><a class="siteLink" href="../" target="_blank">Ver site ↗</a><button id="btnExit" class="exit" style="display:none">Sair</button></div></div></header>
+<main id="app" class="app"></main>
+<div id="toasts"></div>
+<script type="module" src="./admin.js"></script>
+</body></html>

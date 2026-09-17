@@ -1,0 +1,28 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    // Mesma política do Firestore: e-mail de operação ou doc ativo em admins/{uid}.
+    function isAdmin() {
+      return signedIn() && (
+        request.auth.token.email == 'williamwdm@gmail.com'
+        || firestore.exists(/databases/(default)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    // Imagens do site: qualquer visitante pode ver; somente administradores
+    // autenticados fazem upload de imagens (até 4 MB).
+    match /imagens/{fileName} {
+      allow read: if true;
+
+      allow create, update: if isAdmin()
+        && request.resource.size < 4 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+
+      allow delete: if isAdmin();
+    }
+  }
+}
