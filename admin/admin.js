@@ -5,7 +5,7 @@ import { getFirestore, doc, getDoc, setDoc, serverTimestamp } from 'https://www.
 import { firebaseConfig, SITE_ID } from '../firebase-config.js';
 import { DEFAULT_DATA } from '../site-data.js';
 
-const ADMIN_EMAILS = ['williamwdm@gmail.com'];
+const ADMIN_EMAILS = ['ferrarigesso@hotmail.com'];
 const SECTION_DEFS = [
   { id: 'carrossel',    titulo: 'Carrossel',   desc: 'As 3 imagens do topo do site (fundo animado da capa).', count: 3 },
   { id: 'servicos',     titulo: 'Serviços',    desc: 'Os 6 serviços exibidos na seção de serviços.', count: 6 },

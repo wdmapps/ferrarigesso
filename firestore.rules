@@ -10,7 +10,7 @@ service cloud.firestore {
     // administrador via Firebase Console (ou script de migração).
     function isAdmin() {
       return signedIn() && (
-        request.auth.token.email == 'williamwdm@gmail.com'
+        request.auth.token.email == 'ferrarigesso@hotmail.com'
         || (exists(/databases/$(database)/documents/admins/$(request.auth.uid))
           && get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.active == true)
       );
