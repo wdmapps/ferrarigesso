@@ -26,6 +26,8 @@ export const DEFAULT_DATA = {
     whatsapp: '5511940867283',
     telefoneExibido: '(11) 94086-7283',
     cidade: 'Itu e região',
+    instagram: 'https://instagram.com/ferrari_gesso',
+    facebook: 'https://web.facebook.com/ferrari.gesso',
     tag: 'GESSO • DRYWALL • ACABAMENTOS',
     heroTitulo: 'Transformamos ambientes com estilo e acabamento.',
     heroDescricao: 'Soluções em drywall, forros, sancas, molduras e gesso liso para Itu e região.',

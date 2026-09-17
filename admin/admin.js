@@ -182,6 +182,8 @@ function renderSection(secId) {
       ['whatsapp', 'WhatsApp (com DDI e DDD, ex.: 5511940867283)'],
       ['telefoneExibido', 'Telefone exibido (ex.: (11) 94086-7283)'],
       ['cidade', 'Cidade / região'],
+      ['instagram', 'Instagram (link completo, ex.: https://instagram.com/ferrari_gesso)'],
+      ['facebook', 'Facebook (link completo, ex.: https://facebook.com/ferrari.gesso)'],
       ['tag', 'Tag (linha sobre o título)'],
       ['heroTitulo', 'Título da capa'],
       ['heroDescricao', 'Descrição da capa'],
